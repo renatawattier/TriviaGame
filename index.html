@@ -5,113 +5,61 @@
     <meta charset="UTF-8">
     <title> World Cup Trivia Game </title>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="/text/css" href="assets/css/reset.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 
 </head>
 
-
 <body>
-    <div class='container'>
-        <button class='btn btn-primary' id='startBtn'>Start Game</button>
-
-
-
-        <div id=timeLeft>Time left: 05:00</div>
-        <div id=currentQuestion>Current Question</div>
-        <div class='question'>Question</div>
-        <div class='answerList'></div>
-
-        <div id=message></div>
-        <div id=correctedAnswer></div>
-
-
-        <div id=finalMessage></div>
-        <div id=correctAnswers></div>
-        <div id=incorrectAnswers></div>
-        <div id=unanswered></div>
-        <div id='startOverBtn'></div>
+    <div id="splashscreen">
+        <div class="splashBox">
+            <h3> World Cup Trivia!</h3>
+            
+            <hr />
+            <p>You have 60 seconds to guess 10 questions.</p>
+            <br />
+            
+            <button type="button" id="start-btn" class="btn btn-primary black-background white">Start Game</button>
+        </div>
     </div>
-    <script type="text/javascript">
 
+    <div id="answerScreen">
+        <div class="splashBox2">
+            <h2>Lets see how you did</h2>
+            <hr />
+            <p id="correctScreen">Correct Answers: </p>
+            <p id="wrongScreen">Wrong Answers: </p>
+        </div>
+    </div> -->
 
-        $(document).ready(function () {
+ <div id="timesUp">
+        <div class="wrongBox">
+            <h2 class="up">Times Up!</h2>
+            <hr />
+            <p>Here's youre score:</p>
+            <p id="correctTimesUp">Correct Answers: </p>
+            <p id="wrongTimesUp">Wrong Answers: </p>
+        </div>
+    </div>
 
+    <div class="container">
+        
+        <div class="row timeRemain">Time Remaining:
+            <div id="time-remain">60</div>
+        </div>
 
+        <div class="questions">
+            <button type="button" class="btn btn-primary black-background white" id="sub-but">Submit</button>
+            
+        </div>
 
-            var questionList = [
-                {
-                    question: "Que pais ganhou mais copa do mundo?",
-                    answers: {
-                        a: "Brasil",
-                        b: "Argentina",
-                        c: "Italia",
-                        d: "Alemanha",
-                    },
-                    correctAnswer: "a"
-                },
-                {
-                    question: "qual jogador marcou mais gols em copa do mundo?",
-                    answers: {
-                        a: "Just Fontaine - Franca",
-                        b: "Pele - Brasil",
-                        c: "Ronaldo - Brasil",
-                        d: "Miroslav Kose - Alemanha",
-                    },
-                    correctAnswer: "d"
-                },
-                {
-                    question: "Qual a unica selecao que participou de todas as edicoes da copa do mund?",
-                    answers: {
-                        a: "Argentina",
-                        b: "Brasil",
-                        c: "Alemanha",
-                        d: "Italia",
-                    },
-                    correctAnswer: "b"
-                }];
-// <!-- 
-//             var delayButtonAlert;
-//             $("#startBtn").on("click", function () {
-//                 delayButtonAlert = setTimeout(function () {
-//                     console.log(setTimeout);
-//                    }, 10000);
-
-//             }) -->
-
-              $("#startBtn").on("click", function startTimer(duration, display) {
-                var timer = duration, minutes, seconds;
-                setInterval(function () {
-                    minutes = parseInt(timer / 60, 10)
-                    seconds = parseInt(timer % 60, 10);
-
-                    minutes = minutes < 10 ? "0" + minutes : minutes;
-                    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                    display.textContent = minutes + ":" + seconds;
-
-                    if (--timer < 0) {
-                        timer = duration;
-                    }
-                }, 1000);
-            })
-            window.onload = function () {
-                var fiveMinutes = 60 * 5,
-                    display = document.querySelector('#timeLeft');
-                startTimer(fiveMinutes, display);
-            };
-
-
-
-
-
-
-
-
-
-        })
-    </script>
+       
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 
-</html>
+</html> 
