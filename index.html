@@ -14,50 +14,38 @@
 </head>
 
 <body>
-    <div id="splashscreen">
-        <div class="splashBox">
-            <h3> World Cup Trivia!</h3>
-            
-            <hr />
-            <p>You have 60 seconds to guess 10 questions.</p>
-            <br />
-            
-            <button type="button" id="start-btn" class="btn btn-primary black-background white">Start Game</button>
-        </div>
-    </div>
+        <h1>World Cup Trivia Game!</h1>
 
-    <div id="answerScreen">
-        <div class="splashBox2">
-            <h2>Lets see how you did</h2>
-            <hr />
-            <p id="correctScreen">Correct Answers: </p>
-            <p id="wrongScreen">Wrong Answers: </p>
-        </div>
-    </div> -->
+  <p id="mainPage">You have 30 seconds to guess 06 questions.</p>
 
- <div id="timesUp">
-        <div class="wrongBox">
-            <h2 class="up">Times Up!</h2>
-            <hr />
-            <p>Here's youre score:</p>
-            <p id="correctTimesUp">Correct Answers: </p>
-            <p id="wrongTimesUp">Wrong Answers: </p>
-        </div>
-    </div>
+ 
 
-    <div class="container">
-        
-        <div class="row timeRemain">Time Remaining:
-            <div id="time-remain">60</div>
-        </div>
+  <button type="button" id="start-btn" class="btn btn-primary black-background white">Start Game</button>
 
-        <div class="questions">
-            <button type="button" class="btn btn-primary black-background white" id="sub-but">Submit</button>
-            
-        </div>
 
-       
-    </div>
+<div class="hiddenShow block" id="questions"> </div>
+
+<div class="ihateboxes">
+
+
+ 
+<p class="hiddenShow block" id="correct" >  Correct Answers
+  
+
+</p>
+<p class="hiddenShow block" id="wrong"> Wrong Answers 
+
+</p>
+<p class="hiddenShow block" id="score">Your Total Score:
+
+</p>
+
+</div>
+
+<p class="hiddenShow" id="bar"><progress class="hiddenShow" value="0" max="10" id="progressBar"></progress> Time </p>
+
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
